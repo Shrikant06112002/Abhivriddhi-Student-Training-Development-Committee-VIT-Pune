@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .clock {
+        width: 650px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("its working");
+        let clock;
+
+        // Grab the current date
+        let currentDate = new Date();
+
+        // Target future date/24 hour time/Timezone
+        let targetDate = moment.tz("2023-10-30 23:59", "Australia/Sydney");
+
+        // Calculate the difference in seconds between the future and current date
+        let diff = targetDate / 1000 - currentDate.getTime() / 1000;
+
+        if (diff <= 0) {
+          // If remaining countdown is 0
+          clock = new FlipClock($(".clock"), 0, {
+            clockFace: "DailyCounter",
+            countdown: true,
+            autostart: false,
+          });
+          console.log("Date has already passed!");
+        } else {
+          // Run countdown timer
+          clock = new FlipClock($(".clock"), diff, {
+            clockFace: "DailyCounter",
+            countdown: true,
+            callbacks: {
+              stop: function () {
+                console.log("Timer has ended!");
+              },
+            },
+          });
+
+          // Check when timer reaches 0, then stop at 0
+          setTimeout(function () {
+            checktime();
+          }, 1000);
+
+          function checktime() {
+            let t = clock.getTime();
+            if (t <= 0) {
+              clock.setTime(0);
+            }
+            setTimeout(function () {
+              checktime();
+            }, 1000);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

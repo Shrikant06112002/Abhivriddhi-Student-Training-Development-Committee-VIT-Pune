@@ -24,7 +24,8 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
+  <!--! Newly added StyleSheet For header and footer Insta, whatsapp icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
   <!-- <link rel="stylesheet" href="assets/css/about2.css"> -->
@@ -38,7 +39,10 @@
   <link rel="stylesheet" type="text/css" href="assets/css2/main.css"> -->
 
 </head>
+<style>
 
+
+</style>
 <body>
 
   <header class="header" id="header">
@@ -52,17 +56,33 @@
     </div>
     <nav class="navigation">
       <ul class="nav-list">
-        <li><a href="./index.html#hero">Home</a></li>
-        <li><a href="./event.html">Events</a></li>
-        <li><a href="./team.html">Team</a></li>
-        <li><a href="./contact.html">Contact</a></li>
+        <li><a class="nav-links" href="./index.html#hero">Home</a></li>
+        <li><a class="nav-links" href="./event.html">Events</a></li>
+        <li><a class="nav-links" href="./team.html">Team</a></li>
+        <li><a class="nav-links" href="./contact.html">Contact</a></li>
         
       </ul>
     </nav>
-    <div class="hicon">
-      <a class="link" href=""><ion-icon name="logo-linkedin"></ion-icon></a>
-      <a class="inst" href=""><ion-icon name="logo-instagram"></ion-icon></a>
-      <a class="what" href=""><ion-icon name="logo-whatsapp"></ion-icon></a>
+    <!--! Old Icons -->
+    <!-- <div class="hicon">
+      <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
+      <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+      <a href=""><ion-icon name="logo-whatsapp"></ion-icon></a>
+    </div> -->
+    <!--! New Icons -->
+    <div class="icons">
+      <a href="#" class="icon icon--instagram">
+        <i class="fa fa-instagram"></i>
+      </a>
+      <a href="#" class="icon icon--linkedin">
+        <i class="fa fa-linkedin"></i>
+      </a>
+      <a href="#" class="icon icon--whatsapp">
+        <i class="fa fa-whatsapp"></i>
+      </a>
+      <a href="#" class="icon icon--youtube">
+        <i class="fa fa-youtube"></i>
+      </a>
     </div>
   </header>
 
@@ -422,10 +442,26 @@
       <div class="content">
         <div class="social">
           <p>Student Training and Development Committee</p>
-          <div class="icons">
+          <!--! Old Footer Icons -->
+          <!-- <div class="icons">
             <a href=""><ion-icon name="logo-linkedin"></ion-icon></a>
             <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
             <a href=""><ion-icon name="logo-whatsapp"></ion-icon></a>
+          </div> -->
+          <!--!New Footer Icons -->
+          <div class="icons">
+            <a href="#" class="icon icon--instagram">
+              <i class="fa fa-instagram"></i>
+            </a>
+            <a href="#" class="icon icon--linkedin">
+              <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="#" class="icon icon--whatsapp">
+              <i class="fa fa-whatsapp"></i>
+            </a>
+            <a href="#" class="icon icon--youtube">
+              <i class="fa fa-youtube"></i>
+            </a>
           </div>
         </div>
         <div class="quicklinks">
@@ -447,7 +483,7 @@
             <p>+91 72496 53593</p>
           </div>
           <div class="sub-contact">
-            <span><ion-icon name="location-outline"></ion-icon></span>
+            <span><ion-icon name="mail-outline"></ion-icon></span>
             <p>abhivriddhi@vit.edu</p>
           </div>
         </div>

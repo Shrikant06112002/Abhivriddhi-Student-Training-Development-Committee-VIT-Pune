@@ -345,21 +345,25 @@ section {
   padding: 0.4rem 0 1rem 0;
 }
 
-.header .hlogo img{
-  /* font-size: 32px;
-  margin-left: 4rem;
-  font-family: "samarkan";
-  color: #26333a;
-  font-weight: 600; */
-  margin-left: 4rem;
-  height: 60px;
-  width: 60px;
-}
 
 .header .navigation {
   align-self: center;
 }
 
+
+.header .hlogo img{
+  font-size: 32px;
+  margin-left: 4rem;
+  font-family: "samarkan";
+  color: #26333a;
+  font-weight: 600;
+  margin-left: 4rem;
+  height: 60px;
+  width: 60px;
+} 
+
+/*! Old Header logo's Css */
+/*
 .header .hicon {
   align-self: flex-end;
 }
@@ -375,11 +379,72 @@ section {
 }
 .header .hicon > a :hover{
    color: blue;
+} 
+*/
+
+/*! New Header Icons Css */
+.icons{
+  display: flex;
+  column-gap: 15px;
+  margin: auto 8px;
 }
+.icon{
+  width:50px;
+  height:50px;
+  display: inline-flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:22px;
+  color:#fff;
+  border-radius:30%;
+  outline:2px solid #fff;
+  transition-property : outline-offset , outline-color;
+  transition-duration: .25s;
+}
+.icon:hover{
+  outline-offset: 6px;
+}
+.icon:hover i{
+  animation: shake .50px;
+}
+.icon--instagram:hover{
+  background-image: radial-gradient(circle at 30% 107% ,
+  #fdf497 0%, #fdf497 5% , #fd5949 45%,
+  #d6249f 60%, #285AEB 90%);
+  outline-color:#a02d76;
+}
+.icon--whatsapp:hover{
+  background-color:#25D366;
+  outline-color: #25D366;
+}
+.icon--linkedin:hover{
+  background-color:#0072b1;
+  outline-color: #0072b1;
+}
+.icon--facebook:hover{
+  background-color:#301ce4;
+  outline-color: #0a06f3;
+}
+.icon--youtube:hover{
+  background-color:#c4302b;
+  outline-color: #c4302b;
+}
+@keyframes shake{
+  10%{transform:rotate(-15deg);}
+  20%{transform:rotate(-15deg);}
+  30%{transform:rotate(-15deg);}
+  40%{transform:rotate(-15deg);}
+}
+/*! Uptill Here.. */
+
 .header a {
   color: black !important;
 }
-.header a:hover {
+.header .nav-links {
+  color: black !important;
+}
+.header .nav-links:hover {
   color: #2EF8A0 !important;
 }
 
@@ -509,7 +574,7 @@ section {
     margin-top: 0.5vw;
   }
 
-  .header .hicon {
+  .header .icon{
     display: none;
   }
   .nav-list > li > a {
@@ -526,7 +591,7 @@ section {
     margin-top: 0.5vw;
   }
 
-  .header .hicon {
+  .header .icon{
     display: none;
   }
   .nav-list > li > a {
@@ -2354,9 +2419,10 @@ iframe {
   text-align: center;
 }
 
-.footer .icons > a {
+/*! Removed Css for old footer icons */
+/* .footer .icons > a {
   margin-right: 2.8vw;
-}
+} */
 
 .footer .icons > a > ion-icon {
   font-size: 38px;

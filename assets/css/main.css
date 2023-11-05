@@ -125,7 +125,7 @@ section {
 
 .section-header {
   text-align: center;
-  padding-bottom: 60px;
+  padding: 35px 60px;
 }
 
 .section-header > h2 > span {
@@ -133,7 +133,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  font-size: 72px;
+  font-size: 52px;
   color: transparent;
   background: linear-gradient(120deg, #98de5b, #08e1ae);
   -webkit-background-clip: text;
@@ -457,6 +457,9 @@ section {
 }
 
 @media screen and (max-width: 1280px) {
+  .section-header > h2 > span {
+    font-size: 40px;
+  }
   .header .hamburger {
     display: block;
   }
@@ -499,6 +502,9 @@ section {
 }
 
 @media screen and (max-width: 768px) {
+  .section-header > h2 > span {
+    font-size: 40px;
+  }
   .hamburger {
     margin-top: 0.5vw;
   }
@@ -513,6 +519,9 @@ section {
 }
 
 @media screen and (max-width: 430px) {
+  .section-header > h2 > span {
+    font-size: 40px;
+  }
   .hamburger {
     margin-top: 0.5vw;
   }
@@ -578,14 +587,7 @@ section {
   padding-left: 6rem;
 }
 
-.section-header > h2 > span {
-  font-size: 5rem;
-  color: transparent;
-  background: linear-gradient(120deg, #98de5b, #08e1ae);
-  -webkit-background-clip: text;
-  background-clip: text;
-  font-family: "Montserrat", sans-serif;
-}
+
 
 .toggle-about-1 {
   display: none;
@@ -1545,6 +1547,7 @@ iframe {
   color: #fff;
 }
 
+
 @media (max-width: 640px) {
   .hero h2 {
     font-size: 33px;
@@ -1559,6 +1562,8 @@ iframe {
 .hero .icon-boxes {
   padding-bottom: 60px;
 }
+
+
 
 @media (min-width: 1200px) {
   .hero .icon-boxes:before {
@@ -1725,11 +1730,12 @@ iframe {
     margin-bottom: 3vw;
   }
   
-  .hero .Hero-video > video {
-    width: 25vw;
-    height: 25vw;
+  .hero .img-fluid{
+    width: 70vw;
+    height: 70vw;
     border: solid black;
     border-radius: 50%;
+    margin:0px 20px;
   }
   
   /* .hero .Hero-body {

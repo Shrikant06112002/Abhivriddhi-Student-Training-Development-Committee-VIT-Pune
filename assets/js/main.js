@@ -204,8 +204,8 @@ document.addEventListener("DOMContentLoaded", () => {
    * Clients Slider
    */
   new Swiper(".clients-slider", {
-    speed: 100000,
-    loop: true,
+    speed: 1000, // Adjust the speed here (e.g., 100 for very fast)
+    loop: true, // Enable continuous loop
     autoplay: {
       delay: 0,
       disableOnInteraction: false,
@@ -235,6 +235,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     },
   });
+  
 
   /**
    * Init swiper slider with 1 slide at once in desktop view

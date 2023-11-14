@@ -40,10 +40,81 @@
 
 </head>
 <style>
+  .bartender {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none !important;
+    z-index: 10000;
 
+  }
 
+  .block {
+    height: 20%;
+    width: 100%;
+    background-color: #000000 !important;
+    animation-name: tend;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    transform: translateX(-100%);
+    animation-iteration-count: 1;
+    animation-play-state: paused;
+  }
+
+  @keyframes tend {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+  .block:nth-child(2) {
+    animation-delay: 200ms;
+  }
+  .block:nth-child(3) {
+    animation-delay: 400ms;
+  }
+  .block:nth-child(4) {
+    animation-delay: 600ms;
+  }
+  .block:nth-child(5) {
+    animation-delay: 800ms;
+  }
 </style>
+<script>
+  function handleClick(e) {
+    console.log(e.target.href);
+  e.preventDefault();
+  const bars = document.querySelectorAll(".block");
+  console.log(bars.length);
+  bars.forEach((bar, i) => {
+    bar.style.animationPlayState = "running";
+    console.count();
+  });
+  const lastBar = bars[bars.length - 1];
+  
+  lastBar.addEventListener("animationend", () => {
+    setTimeout(() => {
+      window.location = e.target.href;
+      console.log(window.location);
+    }, 1000);
+  });
+}
+</script>
 <body>
+  <!-- Required Page animation -->
+  <div class="bartender">
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+  </div>
 
   <header class="header" id="header">
     <div class="hlogo">
@@ -57,7 +128,7 @@
     <nav class="navigation">
       <ul class="nav-list">
         <li><a class="nav-links" href="./index.html#hero">Home</a></li>
-        <li><a class="nav-links" href="./event.html">Events</a></li>
+        <li><a class="nav-links" onclick="handleClick(event)" href="./event.html">Events</a></li>
         <li><a class="nav-links" href="./team.html">Team</a></li>
         <li><a class="nav-links" href="./contact.html">Contact</a></li>
         
@@ -110,26 +181,6 @@
         </div>
       </div>
     </div>
-    <!-- <section id="hero" class="hero">
-      <div class = "Hero-body row">
-        <div class="Hero-Heading col-8">
-          <h2>Abhivriddhi</h2>
-          <p>Student Training</p>
-          <p> and Development</p>
-          <p>  Committee VIT, Pune</p>
-        </div>
-        <div class="Hero-video col-4">
-            <video  autoplay loop muted>
-                <source src="assets/img/comp2.webm" type="video/webm">
-                Your browser does not support the video tag.
-              </video>
-             <!-- <img src="assets/img/Abhivriddhi_White_Logo-removebg-preview.png" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="100"> -->
-    <!-- </div>
-      </div>  -->
-    <!-- <div class="hero-button">
-        <a href=""><button class="button-53" role="button">Register</button></a>
-        <!-- <a href="./assets/img/comp2.mp4" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a> -->
-    <!-- </div> -->
 
     <div class="down-arrow">
       <a href="#about"><ion-icon name="chevron-down-outline"></ion-icon></a>

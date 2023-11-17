@@ -746,6 +746,59 @@ section {
   background-color: var(--color-primary);
 }
 
+
+/* Change start*/
+.page2{
+  min-height: 100vh;
+  width: 100%;
+  z-index: 10;
+
+}
+
+.scroller{
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  z-index: 10;
+
+}
+
+.scroller::-webkit-scrollbar{
+  display: none;
+}
+.scroller-in{
+  white-space: nowrap;
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+  animation: scroll 20s  linear  ;
+  animation-iteration-count: infinite;
+  transition: all linear 0.5s;
+  
+}
+
+.scroller img{
+ 
+  height: 100px;
+  width:100px;
+  margin-right: 20px; 
+}
+
+
+@keyframes scroll {
+  from{
+      transform: translateX(15%);
+  }
+
+  to{
+      transform: translateX(-150%);
+  }
+ 
+}
+/* Change end */
+
+
 /*--------------------------------------------------------------
 # Stats Counter Section
 --------------------------------------------------------------*/
@@ -757,6 +810,8 @@ section {
 .stats-counter .stats-item {
   padding: 20px 0;
   border-bottom: 1px solid #e4e4e4;
+  display: flex;
+  justify-content: space-between;
 }
 
 .stats-counter .stats-item .purecounter {
@@ -768,21 +823,26 @@ section {
 .stats-counter .stats-item i {
   font-size: 44px;
   line-height: 0;
-  margin-right: 15px;
+  /* margin-right: 15px; */
 }
 
 .stats-counter .stats-item span {
   font-size: 40px;
   display: block;
   font-weight: 500;
-  color: #2ef8a0;
+  color: #2EF8A0;
   line-height: 40px;
+  
+  
 }
 
 .stats-counter .stats-item p {
-  margin: 0;
+
+  margin: 0 ;
   font-family: var(--font-primary);
   font-size: 20px;
+  text-align: left;
+  
 }
 /* Add a "+" sign after the content of the .purecounter element */
 .purecounter::after {
